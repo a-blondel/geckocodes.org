@@ -931,7 +931,7 @@ div.converter {
 	border: 0px;
 	height: 240px;
 	text-align: center;
-	background-image: url('includes/converter.png');
+	background-image: url('converter.png');
 	background-repeat: no-repeat;
 }
 
@@ -943,7 +943,7 @@ div.convertertall {
 	border: 0px;
 	height: 540px;
 	text-align: center;
-	background-image: url('includes/convertertall.png');
+	background-image: url('convertertall.png');
 	background-repeat: no-repeat;
 }
 

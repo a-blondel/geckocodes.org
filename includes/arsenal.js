@@ -90,45 +90,32 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 	}
 
 	function ToHex() {
-		xmlHttp = GetXmlHttpObject()
-		if (xmlHttp == null) {
-			alert("Browser does not support HTTP Request")
-			return
-		}
-		var url = "arsenal.php"
-		url = url + "?tohex=" + document.hexfloat.float.value
-		//url=url+"&sid="+Math.random()
-		xmlHttp.onreadystatechange = hexChange
-		xmlHttp.open("GET", url, true)
-		xmlHttp.send(null)
+		var floatVal = parseFloat(document.hexfloat.float.value);
+		var buffer = new ArrayBuffer(4);
+		var floatView = new Float32Array(buffer);
+		var intView = new Uint32Array(buffer);
+		floatView[0] = floatVal;
+		var hexVal = intView[0].toString(16);
+		document.hexfloat.hex.value = hexVal.toUpperCase();
 	}
 
-	function hexChange() {
-		if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
-			document.hexfloat.hex.value = xmlHttp.responseText
+	function formatFloat(floatVal) {
+		var str = floatVal.toString();
+		if (!str.includes('.')) {
+			str += '.0';
 		}
+		return str;
 	}
-
+	
 	function ToFloat() {
-		xmlHttp = GetXmlHttpObject()
-		if (xmlHttp == null) {
-			alert("Browser does not support HTTP Request")
-			return
-		}
-		var url = "arsenal.php"
-		url = url + "?tofloat=" + document.hexfloat.hex.value
-		//url=url+"&sid="+Math.random()
-		xmlHttp.onreadystatechange = floatChange
-		xmlHttp.open("GET", url, true)
-		xmlHttp.send(null)
+		var hexVal = document.hexfloat.hex.value;
+		var buffer = new ArrayBuffer(4);
+		var floatView = new Float32Array(buffer);
+		var intView = new Uint32Array(buffer);
+		intView[0] = parseInt(hexVal, 16);
+		var floatVal = floatView[0];
+		document.hexfloat.float.value = formatFloat(floatVal);
 	}
-
-	function floatChange() {
-		if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
-			document.hexfloat.float.value = xmlHttp.responseText
-		}
-	}
-
 
 	function DecimalToHex() {
 		if (Number(document.hexdec.dec.value) < Number(-2147483648)) {
@@ -185,7 +172,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 			Bob.style.backgroundColor = "#" + (Enter ? document.stuff.ColorHover.value : document.stuff.ColorNormal.value);
 		if (document.results.Current.value != Bob.form.name) {
 			document.results.Current.value = Bob.form.name;
-			Bob.form.last.value.length > 0 ? CheckConflict(Bob.form.last) : Bob.form.last.value = "";
+			Bob.form.last.value = "";
 			document.getElementById("targetdisplay").innerHTML = "Result (" + Bob.form.name + ")";
 			Update();
 		}
@@ -228,26 +215,6 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 			WhereFrom[0].NOTle.value = WhereFrom[0].NOT.value.substr(2, 2) + WhereFrom[0].NOT.value.substr(0, 2);
 
 		document.results.Output.value = ResultString;
-	}
-
-	function CheckConflict(OnThis) {
-		OnThis.value = ""; //FIXME - This is a workaround as we don't have the backend implementation
-		/* xmlHttp = GetXmlHttpObject()
-		if (xmlHttp == null) OnThis.value = "";
-		else {
-			var url = "arsenal.php";
-			url = url + "?conflict=" + OnThis.value;
-			//url=url+"&nocache="+Math.random();
-			xmlHttp.onreadystatechange = AlertConflict;
-			xmlHttp.open("GET", url, true);
-			xmlHttp.send(null);
-		} */
-	}
-
-	function AlertConflict() {
-		if ((xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") && xmlHttp.responseText != "") {
-			document.getElementById("space").innerHTML = xmlHttp.responseText + document.getElementById("space").innerHTML; ResetAll();
-		}
 	}
 
 	function ResetData() {

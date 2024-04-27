@@ -231,7 +231,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 	}
 
 	function CheckConflict(OnThis) {
-		OnThis.value = ""; //FIXME - This is a workaround as we don't have the backend implentation
+		OnThis.value = ""; //FIXME - This is a workaround as we don't have the backend implementation
 		/* xmlHttp = GetXmlHttpObject()
 		if (xmlHttp == null) OnThis.value = "";
 		else {

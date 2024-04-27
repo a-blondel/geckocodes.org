@@ -1343,3 +1343,9 @@ div.related form select {
 	font-family: monospace;
 	color: #000000;
 }
+
+
+/* FIXME: Temporary disabling the navigation links */
+div.chnav a {
+	pointer-events: none;
+}

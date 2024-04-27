@@ -167,6 +167,13 @@ div.channel a img {
 	margin: 0px;
 }
 
+div.channel button {
+    background: none!important;
+    border: none; 
+    padding: 0!important;
+    cursor: pointer;
+}
+
 div.page {
 	display: block;
 	padding: 0px;

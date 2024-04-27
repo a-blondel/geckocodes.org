@@ -26,17 +26,17 @@ var xmlHttp
 
 function changeNav(sysid, reg)
 {
-	xmlHttp=GetXmlHttpObject()
-	if (xmlHttp==null)
-	{
-		alert ("AJAX not supported, disable JavaScript.")
-		return
-	}
-	var url="nav.php?chid="+sysid.substring(0,1);
-	url = url+"&r="+reg.substring(0,1);
-	xmlHttp.onreadystatechange=stateChanged
-	xmlHttp.open("GET",url,true)
-	xmlHttp.send(null)
+	// xmlHttp=GetXmlHttpObject()
+	// if (xmlHttp==null)
+	// {
+	// 	alert ("AJAX not supported, disable JavaScript.")
+	// 	return
+	// }
+	// var url="nav.php?chid="+sysid.substring(0,1);
+	// url = url+"&r="+reg.substring(0,1);
+	// xmlHttp.onreadystatechange=stateChanged
+	// xmlHttp.open("GET",url,true)
+	// xmlHttp.send(null)
 }
 
 function stateChanged()

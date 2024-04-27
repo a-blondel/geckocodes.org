@@ -931,7 +931,7 @@ div.converter {
 	border: 0px;
 	height: 240px;
 	text-align: center;
-	background-image: url('https://web.archive.org/web/20130402205546im_/http://geckocodes.org/includes/converter.png');
+	background-image: url('includes/converter.png');
 	background-repeat: no-repeat;
 }
 
@@ -943,7 +943,7 @@ div.convertertall {
 	border: 0px;
 	height: 540px;
 	text-align: center;
-	background-image: url('https://web.archive.org/web/20130402205546im_/http://geckocodes.org/includes/convertertall.png');
+	background-image: url('includes/convertertall.png');
 	background-repeat: no-repeat;
 }
 
@@ -1344,8 +1344,6 @@ div.related form select {
 	color: #000000;
 }
 
-
-/* FIXME: Temporary disabling the navigation links */
-div.chnav a {
-	pointer-events: none;
+div.chnav a:hover, div.rnav a:hover, div.hnavbis a:hover {
+    cursor: not-allowed;
 }

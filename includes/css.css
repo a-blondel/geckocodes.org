@@ -1344,6 +1344,6 @@ div.related form select {
 	color: #000000;
 }
 
-div.chnav a:hover, div.rnav a:hover, div.hnavbis a:hover {
+div.chnav a:hover, div.rnav a:hover, div.hnavbis a:hover, div.affiliate_links a:hover {
     cursor: not-allowed;
 }

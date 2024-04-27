@@ -1,166 +1,349 @@
 <div class="left">
-    <div class="forum">
-        <a href="index.html">GeckoCodes.org - Updates</a>
-    </div>
-    <br>
+  <div class="forum">
+    <a href="index.html">GeckoCodes.org - Updates</a>
+  </div>
+  <br />
 </div>
 <div class="groupl">
-    <div class="channel">
-        <button onclick="ToggleCh();" title="Channel Select">
-            <img src="includes/R.png" alt="Wii [R]">
-        </button>
-    </div>
-    <div class="chnav" id="chnav" style="display: none;">
-        <a href="" onclick="changeNav('R', '*'); return false;">[R] Wii</a>
-        <a href="" onclick="changeNav('W', '*'); return false;">[W] WiiWare</a>
-        <a href="" onclick="changeNav('D', '*'); return false;">[D] VC Arcade</a>
-        <a href="" onclick="changeNav('H', '*'); return false;">[H] Wii Channels</a>
-        <a href="" onclick="changeNav('G', '*'); return false;">[G] GameCube</a>
-        <a href="" onclick="changeNav('F', '*'); return false;">[F] NES/Famicom</a>
-        <a href="" onclick="changeNav('J', '*'); return false;">[J] Super NES/Famicom</a>
-        <a href="" onclick="changeNav('N', '*'); return false;">[N] Nintendo 64</a>
-        <a href="" onclick="changeNav('L', '*'); return false;">[L] Sega Master System</a>
-        <a href="" onclick="changeNav('M', '*'); return false;">[M] Genesis/Mega Drive</a>
-        <a href="" onclick="changeNav('E', '*'); return false;">[E] NeoGeo</a>
-        <a href="" onclick="changeNav('C', '*'); return false;">[C] Commodore 64</a>
-        <a href="" onclick="changeNav('X', '*'); return false;">[X] MSX</a>
-        <a href="" onclick="changeNav('P', '*'); return false;">[P] TurboGraFX-16</a>
-        <a href="" onclick="changeNav('Q', '*'); return false;">[Q] TurboGraFX-CD</a>
-    </div>
-    <div class="rnav">
-        <div title="Selected">(*) Any/All Regions</div>
-        <a href="" onclick="changeNav('R', 'E'); return false;">(E) NTSC-US
-            Only</a>
-        <a href="" onclick="changeNav('R', 'J'); return false;">(J) NTSC-JP
-            Only</a>
-        <a href="" onclick="changeNav('R', 'P'); return false;">(P)
-            PAL-EU/AU Only</a>
-        <a href="" onclick="changeNav('R', 'z'); return false;">( ) All
-            Less Common</a>
-    </div>
-    <div class="nav">
-        <table>
-            <tr>
-                <td>
-                    <a class="R" href="https://gamehacking.org/system/wii/all" target="_blank">*</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/c" target="_blank">C</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/g" target="_blank">G</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/k" target="_blank">K</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/o" target="_blank">O</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/s" target="_blank">S</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/w" target="_blank">W</a>
-                </td>
-                <td>
-                    <a class="R" href="https://gamehacking.org/system/wii/%23" target="_blank">#</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/d" target="_blank">D</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/h" target="_blank">H</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/l" target="_blank">L</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/p" target="_blank">P</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/t" target="_blank">T</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/x" target="_blank">X</a>
-                </td>
-                <td><a class="R" href="https://gamehacking.org/system/wii/a" target="_blank">A</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/e" target="_blank">E</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/i" target="_blank">I</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/m" target="_blank">M</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/q" target="_blank">Q</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/u" target="_blank">U</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/y" target="_blank">Y</a>
-                </td>
-                <td><a class="R" href="https://gamehacking.org/system/wii/b" target="_blank">B</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/f" target="_blank">F</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/j" target="_blank">J</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/n" target="_blank">N</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/r" target="_blank">R</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/v" target="_blank">V</a>
-                    <a class="R" href="https://gamehacking.org/system/wii/z" target="_blank">Z</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+  <div class="channel">
+    <button onclick="ToggleCh();" title="Channel Select">
+      <img src="includes/R.png" alt="Wii [R]" />
+    </button>
+  </div>
+  <div class="chnav" id="chnav" style="display: none">
+    <a href="" onclick="changeNav('R', '*'); return false;">[R] Wii</a>
+    <a href="" onclick="changeNav('W', '*'); return false;">[W] WiiWare</a>
+    <a href="" onclick="changeNav('D', '*'); return false;">[D] VC Arcade</a>
+    <a href="" onclick="changeNav('H', '*'); return false;">[H] Wii Channels</a>
+    <a href="" onclick="changeNav('G', '*'); return false;">[G] GameCube</a>
+    <a href="" onclick="changeNav('F', '*'); return false;">[F] NES/Famicom</a>
+    <a href="" onclick="changeNav('J', '*'); return false;"
+      >[J] Super NES/Famicom</a
+    >
+    <a href="" onclick="changeNav('N', '*'); return false;">[N] Nintendo 64</a>
+    <a href="" onclick="changeNav('L', '*'); return false;"
+      >[L] Sega Master System</a
+    >
+    <a href="" onclick="changeNav('M', '*'); return false;"
+      >[M] Genesis/Mega Drive</a
+    >
+    <a href="" onclick="changeNav('E', '*'); return false;">[E] NeoGeo</a>
+    <a href="" onclick="changeNav('C', '*'); return false;">[C] Commodore 64</a>
+    <a href="" onclick="changeNav('X', '*'); return false;">[X] MSX</a>
+    <a href="" onclick="changeNav('P', '*'); return false;"
+      >[P] TurboGraFX-16</a
+    >
+    <a href="" onclick="changeNav('Q', '*'); return false;"
+      >[Q] TurboGraFX-CD</a
+    >
+  </div>
+  <div class="rnav">
+    <div title="Selected">(*) Any/All Regions</div>
+    <a href="" onclick="changeNav('R', 'E'); return false;">(E) NTSC-US Only</a>
+    <a href="" onclick="changeNav('R', 'J'); return false;">(J) NTSC-JP Only</a>
+    <a href="" onclick="changeNav('R', 'P'); return false;"
+      >(P) PAL-EU/AU Only</a
+    >
+    <a href="" onclick="changeNav('R', 'z'); return false;"
+      >( ) All Less Common</a
+    >
+  </div>
+  <div class="nav">
+    <table>
+      <tr>
+        <td>
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/all"
+            target="_blank"
+            >*</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/c"
+            target="_blank"
+            >C</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/g"
+            target="_blank"
+            >G</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/k"
+            target="_blank"
+            >K</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/o"
+            target="_blank"
+            >O</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/s"
+            target="_blank"
+            >S</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/w"
+            target="_blank"
+            >W</a
+          >
+        </td>
+        <td>
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/%23"
+            target="_blank"
+            >#</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/d"
+            target="_blank"
+            >D</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/h"
+            target="_blank"
+            >H</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/l"
+            target="_blank"
+            >L</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/p"
+            target="_blank"
+            >P</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/t"
+            target="_blank"
+            >T</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/x"
+            target="_blank"
+            >X</a
+          >
+        </td>
+        <td>
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/a"
+            target="_blank"
+            >A</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/e"
+            target="_blank"
+            >E</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/i"
+            target="_blank"
+            >I</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/m"
+            target="_blank"
+            >M</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/q"
+            target="_blank"
+            >Q</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/u"
+            target="_blank"
+            >U</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/y"
+            target="_blank"
+            >Y</a
+          >
+        </td>
+        <td>
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/b"
+            target="_blank"
+            >B</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/f"
+            target="_blank"
+            >F</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/j"
+            target="_blank"
+            >J</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/n"
+            target="_blank"
+            >N</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/r"
+            target="_blank"
+            >R</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/v"
+            target="_blank"
+            >V</a
+          >
+          <a
+            class="R"
+            href="https://gamehacking.org/system/wii/z"
+            target="_blank"
+            >Z</a
+          >
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-<form id="searchForm" class="search" action="https://gamehacking.org/system/wii/" method="get"
-    title="Search Title Name">
-    <div>
-        <input id="searchInput" type="text" name="search" class="text">
-        <input type="submit" value="search" class="button">
-    </div>
+<form
+  id="searchForm"
+  class="search"
+  action="https://gamehacking.org/system/wii/"
+  method="get"
+  title="Search Title Name"
+>
+  <div>
+    <input id="searchInput" type="text" name="search" class="text" />
+    <input type="submit" value="search" class="button" />
+  </div>
 </form>
 <script>
-    document.getElementById('searchForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var searchInput = document.getElementById('searchInput').value;
-        var actionUrl = this.action;
-        window.open(actionUrl + searchInput, '_blank');
+  document
+    .getElementById("searchForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      var searchInput = document.getElementById("searchInput").value;
+      var actionUrl = this.action;
+      window.open(actionUrl + searchInput, "_blank");
     });
 </script>
 <div class="hnav">
-    <div>Arsenal:</div>
-    <a href="codetype-doc.html">&nbsp;Codetype Documentation</a>
-    <a href="btn-conditionals.html">&nbsp;Button Conditionals</a>
-    <a href="data-conversions.html">&nbsp;Data Conversions</a>
-    <a href="gct.html">&nbsp;Online GCT Creator</a>
-    <a href="https://wiibrew.org/wiki/Accio_Hacks" title="Official GeckoCodes Homebrew App by James0x57" target="_blank">&nbsp;Accio Hacks</a>
-    <a href="http://twitter.com/GeckoCodes/">&nbsp;@GeckoCodes</a>
+  <div>Arsenal:</div>
+  <a href="codetype-doc.html">&nbsp;Codetype Documentation</a>
+  <a href="btn-conditionals.html">&nbsp;Button Conditionals</a>
+  <a href="data-conversions.html">&nbsp;Data Conversions</a>
+  <a href="gct.html">&nbsp;Online GCT Creator</a>
+  <a
+    href="https://wiibrew.org/wiki/Accio_Hacks"
+    title="Official GeckoCodes Homebrew App by James0x57"
+    target="_blank"
+    >&nbsp;Accio Hacks</a
+  >
+  <a href="http://twitter.com/GeckoCodes/" target="_blank">&nbsp;@GeckoCodes</a>
 </div>
 <div class="hnav hnavbis">
-    <div>WiiRD Hackers:</div>
-    <a href="" onclick="return false;">&nbsp;List All Known</a>
-    <a href="" onclick="return false;">&nbsp;Join the Known</a>
+  <div>WiiRD Hackers:</div>
+  <a href="" onclick="return false;">&nbsp;List All Known</a>
+  <a href="" onclick="return false;">&nbsp;Join the Known</a>
 </div>
 <div class="affiliate_links">
-    <div class="affilhead">Affiliates:</div>
-    <div class="row" title="The blog about the future of Wii hacking!">
-        <a href="http://wiird.l0nk.org/forum/index.php" title="WiiRD Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://wiird.l0nk.org/wp/" title="WiiRD Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;WiiRD
-    </div>
-    <div class="row" title="Japanese Wii Hacking Forums">
-        <a href="http://bb2.atbb.jp/wiicode/index.php" title="Japanese Wii Hacking Forums">&nbsp;<img
-                alt="Forum" src="includes/forum.png">&nbsp;</a>&nbsp;Wii Hacking JP
-    </div>
-    <div class="row" title="Shibby!">
-        <a href="http://www.kodewerx.org/forum/" title="Kodewerx Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://www.kodewerx.org/" title="Kodewerx Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;Kodewerx
-    </div>
-    <div class="row" title="Previously GSHI.org">
-        <a href="http://gamehacking.org/vb" title="GameHacking.org Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://gamehacking.org/" title="GameHacking.org Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;GameHacking.org
-    </div>
-    <div class="row" title="Codemasters Project">
-        <a href="http://www.codemasters-project.net/vb/" title="CMP Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://www.codemasters-project.net/" title="CMP Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;CMP
-    </div>
-    <div class="row" title="ARCentral.net">
-        <a href="http://forum.arcentral.net/" title="ARCentral.net Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://arcentral.net/" title="ARCentral.net Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;ARCentral.net
-    </div>
-    <div class="row" title="WiiPlaza Console Homebrew">
-        <a href="http://hyperspeed.1talk.net/forum.htm" title="WiiPlaza Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://hyperspeed.1talk.net/" title="WiiPlaza Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;WiiPlaza
-    </div>
-    <div class="row" title="Wii-Homebrew.com">
-        <a href="http://forum.wii-homebrew.com/" title="Wii-Homebrew.com Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://www.wii-homebrew.com/" title="Wii-Homebrew.com Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;Wii Homebrew
-    </div>
-    <div class="row" title="hetoan2">
-        <a href="http://hetoan2.com/forum/" title="hetoan2 Forums">&nbsp;<img alt="Forum"
-                src="includes/forum.png">&nbsp;</a>
-        <a href="http://hetoan2.com/" title="hetoan2 Home">&nbsp;<img alt="Home"
-                src="includes/home.png">&nbsp;</a>&nbsp;hetoan2
-    </div>
-    <br>
+  <div class="affilhead">Affiliates:</div>
+  <div class="row" title="The blog about the future of Wii hacking!">
+    <a href="" title="WiiRD Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="WiiRD Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;WiiRD
+  </div>
+  <div class="row" title="Japanese Wii Hacking Forums">
+    <a
+      href=""
+      title="Japanese Wii Hacking Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >&nbsp;Wii Hacking JP
+  </div>
+  <div class="row" title="Shibby!">
+    <a href="" title="Kodewerx Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="Kodewerx Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;Kodewerx
+  </div>
+  <div class="row" title="Previously GSHI.org">
+    <a href="" title="GameHacking.org Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="GameHacking.org Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;GameHacking.org
+  </div>
+  <div class="row" title="Codemasters Project">
+    <a href="" title="CMP Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="CMP Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;CMP
+  </div>
+  <div class="row" title="ARCentral.net">
+    <a href="" title="ARCentral.net Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="ARCentral.net Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;ARCentral.net
+  </div>
+  <div class="row" title="WiiPlaza Console Homebrew">
+    <a href="" title="WiiPlaza Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="WiiPlaza Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;WiiPlaza
+  </div>
+  <div class="row" title="Wii-Homebrew.com">
+    <a href="" title="Wii-Homebrew.com Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="Wii-Homebrew.com Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;Wii Homebrew
+  </div>
+  <div class="row" title="hetoan2">
+    <a href="" title="hetoan2 Forums" onclick="return false;"
+      >&nbsp;<img alt="Forum" src="includes/forum.png" />&nbsp;</a
+    >
+    <a href="" title="hetoan2 Home" onclick="return false;"
+      >&nbsp;<img alt="Home" src="includes/home.png" />&nbsp;</a
+    >&nbsp;hetoan2
+  </div>
+  <br />
 </div>

@@ -1,247 +1,281 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>GeckoCodes.org - WiiRD Code Database</title>
-
-	<meta name="keywords" content="gecko os, wii, wiird, codes, hacks, wiiware, virtual console, vc, usbgecko">
-
-	<meta name="Generator" content="NotePad, TextPad">
-
-	<meta name="description" content="One place, all the codes. GeckoCodes.org WiiRD Hacker's Database.">
-
-	<meta name="DISTRIBUTION" content="global">
-
-	<meta name="ROBOTS" content="all">
-
-	<link rel="SHORTCUT ICON" href="includes/favicon.ico">
-
-	<link rel="search" type="application/opensearchdescription+xml" href="includes/opensearch.xml" title="GeckoCodes.org">
-
-	<link rel="styleSheet" href="includes/css.css" type="text/css">
+	<script src="includes/jquery.min.js"></script>
+	<script type="text/javascript" src="includes/ajax.js"></script>
+	<script type="text/javascript" src="includes/arsenal.js"></script>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#navigation").load("navigation.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<div id="header"></div>
 </head>
 
 <body onload="ResetAll(); ToggleCh()">
-
-	<script type="text/javascript" src="includes/ajax.js"></script><script type="text/javascript" src="includes/arsenal.js"></script>
-
 	<div class="top">
- 	</div>
-	<table><tr><td id="navigation"><div class="left">
-	<div class="forum"><a href="index.php@chid=R&amp;r=%252A.html">GeckoCodes.org - Updates</a></div><br>
-	</div><div class="groupl"><div class="channel"><a href="index.php@chid=1.html" onclick="ToggleCh(); this.blur(); return false;" title="Channel Select"><img src="includes/R.png" alt="Wii [R]"></a></div>
-<div class="chnav" id="chnav">
-			<a href="index.php@chid=R.html" onclick="changeNav('R', '*'); return false;">[R] Wii</a>
-			<a href="index.php@chid=W.html" onclick="changeNav('W', '*'); return false;">[W] WiiWare</a>
-			<a href="index.php@chid=D.html" onclick="changeNav('D', '*'); return false;">[D] VC Arcade</a>
-			<a href="index.php@chid=H.html" onclick="changeNav('H', '*'); return false;">[H] Wii Channels</a>
-			<a href="index.php@chid=G.html" onclick="changeNav('G', '*'); return false;">[G] GameCube</a>
-			<a href="index.php@chid=F.html" onclick="changeNav('F', '*'); return false;">[F] NES/Famicom</a>
-			<a href="index.php@chid=J.html" onclick="changeNav('J', '*'); return false;">[J] Super NES/Famicom</a>
-			<a href="index.php@chid=N.html" onclick="changeNav('N', '*'); return false;">[N] Nintendo 64</a>
-			<a href="index.php@chid=L.html" onclick="changeNav('L', '*'); return false;">[L] Sega Master System</a>
-			<a href="index.php@chid=M.html" onclick="changeNav('M', '*'); return false;">[M] Genesis/Mega Drive</a>
-			<a href="index.php@chid=E.html" onclick="changeNav('E', '*'); return false;">[E] NeoGeo</a>
-			<a href="index.php@chid=C.html" onclick="changeNav('C', '*'); return false;">[C] Commodore 64</a>
-			<a href="index.php@chid=X.html" onclick="changeNav('X', '*'); return false;">[X] MSX</a>
-			<a href="index.php@chid=P.html" onclick="changeNav('P', '*'); return false;">[P] TurboGraFX-16</a>
-			<a href="index.php@chid=Q.html" onclick="changeNav('Q', '*'); return false;">[Q] TurboGraFX-CD</a>
-		</div><div class="rnav"><div title="Selected">(*) Any/All Regions</div><a href="index.php@chid=R&amp;r=E.html" onclick="changeNav('R', 'E'); return false;">(E) NTSC-US Only</a><a href="index.php@chid=R&amp;r=J.html" onclick="changeNav('R', 'J'); return false;">(J) NTSC-JP Only</a><a href="index.php@chid=R&amp;r=P.html" onclick="changeNav('R', 'P'); return false;">(P) PAL-EU/AU Only</a><a href="index.php@chid=R&amp;r=z.html" onclick="changeNav('R', 'z'); return false;">( ) All Less Common</a></div><div class="nav"><table><tr><td><a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=all.html" title="All">*</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=c.html">C</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=g.html">G</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=k.html">K</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=o.html">O</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=s.html">S</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=w.html">W</a>
-</td><td><a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=num.html">#</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=d.html">D</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=h.html">H</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=l.html">L</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=p.html">P</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=t.html">T</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=x.html">X</a>
-</td><td><a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=a.html">A</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=e.html">E</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=i.html">I</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=m.html">M</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=q.html">Q</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=u.html">U</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=y.html">Y</a>
-</td><td><a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=b.html">B</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=f.html">F</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=j.html">J</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=n.html">N</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=r.html">R</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=v.html">V</a>
-<a class="R" href="index.php@chid=R&amp;r=%252A&amp;l=z.html">Z</a>
-</td></tr></table></div></div><form class="search" action="http://geckocodes.org/index.php" method="get" title="Search Title ID or Keywords"><div>
-		<input type="text" name="search" class="text">
-		<input type="submit" value="search" class="button"></div></form><div class="hnav">
-		<div>Arsenal:</div>
-		<a href="index.php@arsenal=1.html">&nbsp;Codetype Documentation</a>
-		<a href="index.php@arsenal=2.html">&nbsp;Button Conditionals</a>
-		<a href="index.php@arsenal=3.html">&nbsp;Data Conversions</a>
-		<a href="index.php@gct=.html">&nbsp;Online GCT Creator</a>
-		<a href="AH.php.html" title="Official GeckoCodes Homebrew App by James0x57">&nbsp;Accio Hacks</a>
-		<a href="http://twitter.com/GeckoCodes/">&nbsp;@GeckoCodes</a>
-		</div><div class="hnav">
-		<div>WiiRD Hackers:</div>
-		<a href="index.php@chid=R&amp;r=%252A&amp;hacker=all.html">&nbsp;List All Known</a>
-		<a href="index.php@chid=R&amp;r=%252A&amp;hacker=join.html">&nbsp;Join the Known</a>
-		</div>
-<div class="affiliate_links"><div class="affilhead">Affiliates:</div>
-<div class="row" title="The blog about the future of Wii hacking!">
-<a href="http://wiird.l0nk.org/forum/index.php" title="WiiRD Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://wiird.l0nk.org/wp/" title="WiiRD Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;WiiRD</div>
-<div class="row" title="Japanese Wii Hacking Forums">
-<a href="http://bb2.atbb.jp/wiicode/index.php" title="Japanese Wii Hacking Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>&nbsp;Wii Hacking JP</div>
-<div class="row" title="Shibby!">
-<a href="http://www.kodewerx.org/forum/" title="Kodewerx Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://www.kodewerx.org/" title="Kodewerx Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;Kodewerx</div>
-<div class="row" title="Previously GSHI.org">
-<a href="http://gamehacking.org/vb" title="GameHacking.org Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://gamehacking.org/" title="GameHacking.org Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;GameHacking.org</div>
-<div class="row" title="Codemasters Project">
-<a href="http://www.codemasters-project.net/vb/" title="CMP Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://www.codemasters-project.net/" title="CMP Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;CMP</div>
-<div class="row" title="ARCentral.net">
-<a href="http://forum.arcentral.net/" title="ARCentral.net Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://arcentral.net/" title="ARCentral.net Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;ARCentral.net</div>
-<div class="row" title="WiiPlaza Console Homebrew">
-<a href="http://hyperspeed.1talk.net/forum.htm" title="WiiPlaza Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://hyperspeed.1talk.net/" title="WiiPlaza Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;WiiPlaza</div>
-<div class="row" title="Wii-Homebrew.com">
-<a href="http://forum.wii-homebrew.com/" title="Wii-Homebrew.com Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://www.wii-homebrew.com/" title="Wii-Homebrew.com Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;Wii Homebrew</div>
-<div class="row" title="hetoan2">
-<a href="http://hetoan2.com/forum/" title="hetoan2 Forums">&nbsp;<img alt="Forum" src="includes/forum.png">&nbsp;</a>
-<a href="http://hetoan2.com/" title="hetoan2 Home">&nbsp;<img alt="Home" src="includes/home.png">&nbsp;</a>&nbsp;hetoan2</div>
-<br></div>
-
-</td><td><div class="list"><div class="title">GeckoCodes.org - Button Conditionals</div><div id="space"></div><div class="buttons"><table><tr><td>
-<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="wii"> <div id="wiidiv"> 
-<div>Wii Remote + Nunchuck</div>
-<input type="image" name="bttnwii" alt="Left" value="0001" onclick="Buttons(this);" src="includes/buttons/Left.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="Right" value="0002" onclick="Buttons(this);" src="includes/buttons/Right.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="Down" value="0004" onclick="Buttons(this);" src="includes/buttons/Down.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="Up" value="0008" onclick="Buttons(this);" src="includes/buttons/Up.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnwii" alt="Plus" value="0010" onclick="Buttons(this);" src="includes/buttons/p.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="0020" title="0020" value="0020" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="0040" title="0040" value="0040" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="0080" title="0080" value="0080" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnwii" alt="2" value="0100" onclick="Buttons(this);" src="includes/buttons/2.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="1" value="0200" onclick="Buttons(this);" src="includes/buttons/1.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="B" value="0400" onclick="Buttons(this);" src="includes/buttons/B.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="A" value="0800" onclick="Buttons(this);" src="includes/buttons/A.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnwii" alt="Minus" value="1000" onclick="Buttons(this);" src="includes/buttons/m.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="Z" value="2000" onclick="Buttons(this);" src="includes/buttons/Z.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="C" value="4000" onclick="Buttons(this);" src="includes/buttons/C.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnwii" alt="Home" value="8000" onclick="Buttons(this);" src="includes/buttons/Home.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="hidden" name="last" value="">
-<input type="hidden" name="OR" value="0000">
-<input type="hidden" name="NOT" value="FFFF">
-</div></form></td><td>
-<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="results"> <div id="resultsdiv"> 
-Address <input id="Address" type="text" name="Address" value="80000000" maxlength="8" onchange="Validate();"><br>
-<input type="checkbox" name="Pointer" value="" onclick="Update();"> Using Pointer<br>
-<input type="checkbox" name="Inclusive" value="" onclick="Update();"> Inclusive (use mask)<br>
-<input type="checkbox" name="Endif" value="" onclick="Update();"> Apply Endif<br>
-<input type="checkbox" name="Reverse" value="" onclick="Update();"> Little Endian (Reverse)<br>Compare Type<br><div class="giveborder">
-= <input type="radio" name="Compare" value="8" checked="checked" onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-!= <input type="radio" name="Compare" value="A" onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-&gt; <input type="radio" name="Compare" value="C" onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-&lt; <input type="radio" name="Compare" value="E" onclick="this.form.CT.value=this.value; Update();"></div><br>
-<p id="targetdisplay">Result (wii)</p> <a href="index.php@arsenal=2.html#" onclick="ResetData(); this.blur(); return false;">[Reset]</a><br>
-					<input class="targetdisplay" type="text" name="Output" value="28000000 00000000" maxlength="17"><br>
-<br><div class="giveborder"><p id="reverse">Value Lookup </p><input id="ToButtons" type="text" name="ToButtons" value="0000" maxlength="4" onchange="ValidateSetButtons();"> <a href="index.php@arsenal=2.html#" onclick="SetButtons(); this.blur(); return false;">Show</a></div>
-<input type="hidden" name="CT" value="8">
-<input type="hidden" name="Current" value="wii">
-</div></form></td></tr><tr><td>
-<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="classic"> <div id="classicdiv"> 
-<div>Classic Controller</div>
-<input type="image" name="bttnclassic" alt="Up" value="0001" onclick="Buttons(this);" src="includes/buttons/Up.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Left" value="0002" onclick="Buttons(this);" src="includes/buttons/Left.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Zr" value="0004" onclick="Buttons(this);" src="includes/buttons/ZR.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="X" value="0008" onclick="Buttons(this);" src="includes/buttons/xx.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnclassic" alt="A" value="0010" onclick="Buttons(this);" src="includes/buttons/aa.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Y" value="0020" onclick="Buttons(this);" src="includes/buttons/yy.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="B" value="0040" onclick="Buttons(this);" src="includes/buttons/bb.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Zl" value="0080" onclick="Buttons(this);" src="includes/buttons/ZL.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnclassic" alt="0100" title="0100" value="0100" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="R" value="0200" onclick="Buttons(this);" src="includes/buttons/R.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Plus" value="0400" onclick="Buttons(this);" src="includes/buttons/p.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="0800" title="0800" value="0800" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttnclassic" alt="Minus" value="1000" onclick="Buttons(this);" src="includes/buttons/m.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="L" value="2000" onclick="Buttons(this);" src="includes/buttons/L.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Down" value="4000" onclick="Buttons(this);" src="includes/buttons/Down.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttnclassic" alt="Right" value="8000" onclick="Buttons(this);" src="includes/buttons/Right.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="hidden" name="last" value="">
-<input type="hidden" name="OR" value="0000">
-<input type="hidden" name="NOT" value="FFFF">
-</div></form></td><td>
-<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="gcn"> <div id="gcndiv"> 
-<div>GameCube Controller</div>
-<input type="image" name="bttngcn" alt="Left" value="0001" onclick="Buttons(this);" src="includes/buttons/Left.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="Right" value="0002" onclick="Buttons(this);" src="includes/buttons/Right.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="Down" value="0004" onclick="Buttons(this);" src="includes/buttons/Down.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="Up" value="0008" onclick="Buttons(this);" src="includes/buttons/Up.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttngcn" alt="Z" value="0010" onclick="Buttons(this);" src="includes/buttons/Z.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="R" value="0020" onclick="Buttons(this);" src="includes/buttons/R.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="L" value="0040" onclick="Buttons(this);" src="includes/buttons/L.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="0080" title="0080" value="0080" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttngcn" alt="A" value="0100" onclick="Buttons(this);" src="includes/buttons/A.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="B" value="0200" onclick="Buttons(this);" src="includes/buttons/B.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="X" value="0400" onclick="Buttons(this);" src="includes/buttons/X.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="Y" value="0800" onclick="Buttons(this);" src="includes/buttons/Y.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<br>
-<input type="image" name="bttngcn" alt="Start" value="1000" onclick="Buttons(this);" src="includes/buttons/Start.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="2000" title="2000" value="2000" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="4000" title="4000" value="4000" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="image" name="bttngcn" alt="8000" title="8000" value="8000" onclick="Buttons(this);" src="includes/buttons/blank.png" onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-<input type="hidden" name="last" value="">
-<input type="hidden" name="OR" value="0000">
-<input type="hidden" name="NOT" value="FFFF">
-</div></form></td></tr></table>
-<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="stuff"> <p> 
-<input type="hidden" name="ColorHover" value="19B0E9">
-<input type="hidden" name="ColorClick" value="E87D21">
-<input type="hidden" name="ColorNormal" value="FFFFFF">
-<input type="hidden" name="CanReset" value="wii classic gcn">
-</p></form><br><br></div></div>	<div class="googleads">
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-8544672680682550";
-	/* 728x90, created 12/29/09 */
-	google_ad_slot = "3644950698";
-	google_ad_width = 728;
-	google_ad_height = 90;
-	//-->
-	</script>
-	<script type="text/javascript" src="../../../20130402164802js_/http%253A/pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
 	</div>
-	</td></tr></table>
+	<table>
+		<tr>
+			<td id="navigation">
+			</td>
+			<td>
+				<div class="list">
+					<div class="title">GeckoCodes.org - Button Conditionals</div>
+					<div id="space"></div>
+					<div class="buttons">
+						<table>
+							<tr>
+								<td>
+									<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;"
+										name="wii">
+										<div id="wiidiv">
+											<div>Wii Remote + Nunchuck</div>
+											<input type="image" name="bttnwii" alt="Left" value="0001"
+												onclick="Buttons(this);" src="includes/buttons/Left.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="Right" value="0002"
+												onclick="Buttons(this);" src="includes/buttons/Right.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="Down" value="0004"
+												onclick="Buttons(this);" src="includes/buttons/Down.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="Up" value="0008"
+												onclick="Buttons(this);" src="includes/buttons/Up.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnwii" alt="Plus" value="0010"
+												onclick="Buttons(this);" src="includes/buttons/p.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="0020" title="0020" value="0020"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="0040" title="0040" value="0040"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="0080" title="0080" value="0080"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnwii" alt="2" value="0100"
+												onclick="Buttons(this);" src="includes/buttons/2.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="1" value="0200"
+												onclick="Buttons(this);" src="includes/buttons/1.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="B" value="0400"
+												onclick="Buttons(this);" src="includes/buttons/B.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="A" value="0800"
+												onclick="Buttons(this);" src="includes/buttons/A.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnwii" alt="Minus" value="1000"
+												onclick="Buttons(this);" src="includes/buttons/m.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="Z" value="2000"
+												onclick="Buttons(this);" src="includes/buttons/Z.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="C" value="4000"
+												onclick="Buttons(this);" src="includes/buttons/C.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnwii" alt="Home" value="8000"
+												onclick="Buttons(this);" src="includes/buttons/Home.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="hidden" name="last" value="">
+											<input type="hidden" name="OR" value="0000">
+											<input type="hidden" name="NOT" value="FFFF">
+										</div>
+									</form>
+								</td>
+								<td>
+									<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;"
+										name="results">
+										<div id="resultsdiv">
+											Address <input id="Address" type="text" name="Address" value="80000000"
+												maxlength="8" onchange="Validate();"><br>
+											<input type="checkbox" name="Pointer" value="" onclick="Update();"> Using
+											Pointer<br>
+											<input type="checkbox" name="Inclusive" value="" onclick="Update();">
+											Inclusive (use mask)<br>
+											<input type="checkbox" name="Endif" value="" onclick="Update();"> Apply
+											Endif<br>
+											<input type="checkbox" name="Reverse" value="" onclick="Update();"> Little
+											Endian (Reverse)<br>Compare Type<br>
+											<div class="giveborder">
+												= <input type="radio" name="Compare" value="8" checked="checked"
+													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
+												!= <input type="radio" name="Compare" value="A"
+													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
+												&gt; <input type="radio" name="Compare" value="C"
+													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
+												&lt; <input type="radio" name="Compare" value="E"
+													onclick="this.form.CT.value=this.value; Update();"></div><br>
+											<p id="targetdisplay">Result (wii)</p> <a href="index.php@arsenal=2.html#"
+												onclick="ResetData(); this.blur(); return false;">[Reset]</a><br>
+											<input class="targetdisplay" type="text" name="Output"
+												value="28000000 00000000" maxlength="17"><br>
+											<br>
+											<div class="giveborder">
+												<p id="reverse">Value Lookup </p><input id="ToButtons" type="text"
+													name="ToButtons" value="0000" maxlength="4"
+													onchange="ValidateSetButtons();"> <a
+													href="index.php@arsenal=2.html#"
+													onclick="SetButtons(); this.blur(); return false;">Show</a>
+											</div>
+											<input type="hidden" name="CT" value="8">
+											<input type="hidden" name="Current" value="wii">
+										</div>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;"
+										name="classic">
+										<div id="classicdiv">
+											<div>Classic Controller</div>
+											<input type="image" name="bttnclassic" alt="Up" value="0001"
+												onclick="Buttons(this);" src="includes/buttons/Up.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Left" value="0002"
+												onclick="Buttons(this);" src="includes/buttons/Left.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Zr" value="0004"
+												onclick="Buttons(this);" src="includes/buttons/ZR.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="X" value="0008"
+												onclick="Buttons(this);" src="includes/buttons/xx.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnclassic" alt="A" value="0010"
+												onclick="Buttons(this);" src="includes/buttons/aa.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Y" value="0020"
+												onclick="Buttons(this);" src="includes/buttons/yy.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="B" value="0040"
+												onclick="Buttons(this);" src="includes/buttons/bb.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Zl" value="0080"
+												onclick="Buttons(this);" src="includes/buttons/ZL.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnclassic" alt="0100" title="0100" value="0100"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="R" value="0200"
+												onclick="Buttons(this);" src="includes/buttons/R.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Plus" value="0400"
+												onclick="Buttons(this);" src="includes/buttons/p.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="0800" title="0800" value="0800"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttnclassic" alt="Minus" value="1000"
+												onclick="Buttons(this);" src="includes/buttons/m.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="L" value="2000"
+												onclick="Buttons(this);" src="includes/buttons/L.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Down" value="4000"
+												onclick="Buttons(this);" src="includes/buttons/Down.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttnclassic" alt="Right" value="8000"
+												onclick="Buttons(this);" src="includes/buttons/Right.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="hidden" name="last" value="">
+											<input type="hidden" name="OR" value="0000">
+											<input type="hidden" name="NOT" value="FFFF">
+										</div>
+									</form>
+								</td>
+								<td>
+									<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;"
+										name="gcn">
+										<div id="gcndiv">
+											<div>GameCube Controller</div>
+											<input type="image" name="bttngcn" alt="Left" value="0001"
+												onclick="Buttons(this);" src="includes/buttons/Left.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="Right" value="0002"
+												onclick="Buttons(this);" src="includes/buttons/Right.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="Down" value="0004"
+												onclick="Buttons(this);" src="includes/buttons/Down.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="Up" value="0008"
+												onclick="Buttons(this);" src="includes/buttons/Up.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttngcn" alt="Z" value="0010"
+												onclick="Buttons(this);" src="includes/buttons/Z.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="R" value="0020"
+												onclick="Buttons(this);" src="includes/buttons/R.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="L" value="0040"
+												onclick="Buttons(this);" src="includes/buttons/L.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="0080" title="0080" value="0080"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttngcn" alt="A" value="0100"
+												onclick="Buttons(this);" src="includes/buttons/A.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="B" value="0200"
+												onclick="Buttons(this);" src="includes/buttons/B.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="X" value="0400"
+												onclick="Buttons(this);" src="includes/buttons/X.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="Y" value="0800"
+												onclick="Buttons(this);" src="includes/buttons/Y.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<br>
+											<input type="image" name="bttngcn" alt="Start" value="1000"
+												onclick="Buttons(this);" src="includes/buttons/Start.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="2000" title="2000" value="2000"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="4000" title="4000" value="4000"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="image" name="bttngcn" alt="8000" title="8000" value="8000"
+												onclick="Buttons(this);" src="includes/buttons/blank.png"
+												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
+											<input type="hidden" name="last" value="">
+											<input type="hidden" name="OR" value="0000">
+											<input type="hidden" name="NOT" value="FFFF">
+										</div>
+									</form>
+								</td>
+							</tr>
+						</table>
+						<form method="GET" action="index.php@arsenal=2.html#" onsubmit="return false;" name="stuff">
+							<p>
+								<input type="hidden" name="ColorHover" value="19B0E9">
+								<input type="hidden" name="ColorClick" value="E87D21">
+								<input type="hidden" name="ColorNormal" value="FFFFFF">
+								<input type="hidden" name="CanReset" value="wii classic gcn">
+							</p>
+						</form><br><br>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
 
-
-	<!-- Begin Google Analytics Code -->
-		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		<script type="text/javascript">
-			try { var pageTracker = _gat._getTracker("UA-10110819-1"); pageTracker._trackPageview(); } catch(err) {}
-		</script>
-	<!-- End Google Analytics Code -->
-
-	<div class="copy"><br>
-		This Page and Source Code &copy; Copyright 2008-2011, <a href="index.php@hacker=James0x57.html">James Atherton</a>. All content is property of their original creators and may be removed by them at any time.
+	<div id="footer">
 	</div>
-	
+
 </body>
+
 </html>

@@ -743,6 +743,7 @@ div.endpage {
 	border-top: solid 1px #FFFFFF;
 	background: #19b0e9;
 	height: 100%;
+	min-height: 90px;
 }
 
 a.updateleft {

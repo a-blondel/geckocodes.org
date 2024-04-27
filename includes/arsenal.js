@@ -231,7 +231,8 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 	}
 
 	function CheckConflict(OnThis) {
-		xmlHttp = GetXmlHttpObject()
+		OnThis.value = ""; //FIXME - This is a workaround as we don't have the backend implentation
+		/* xmlHttp = GetXmlHttpObject()
 		if (xmlHttp == null) OnThis.value = "";
 		else {
 			var url = "arsenal.php";
@@ -240,7 +241,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function (obj) { this.__WB_source = obj; r
 			xmlHttp.onreadystatechange = AlertConflict;
 			xmlHttp.open("GET", url, true);
 			xmlHttp.send(null);
-		}
+		} */
 	}
 
 	function AlertConflict() {

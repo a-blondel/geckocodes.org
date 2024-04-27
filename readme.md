@@ -1,6 +1,6 @@
 # GeckoCodes.org
 
-An unofficial project aiming at creating a `static` version of this mythic website.
+An unofficial project aiming at creating a `static` version of this mythical website.
 
 Link : https://a-blondel.github.io/geckocodes.org/
 

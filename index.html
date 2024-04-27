@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <script src="includes/jquery.min.js"></script>
+    <script type="text/javascript" src="includes/ajax.js"></script>
+    <script type="text/javascript" src="includes/arsenal.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+        $("#navigation").load("navigation.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
+    <div id="header"></div>
+  </head>
+
+  <body onload="ToggleCh()">
+
+    <div class="top"></div>
+    <table>
+      <tr>
+        <td id="navigation"></td>
+        <td>
+          <div class="list">
+            <div class="title">GeckoCodes.org - Update History</div>
+            <div class="join center">
+              GeckoCodes.org created by James0x57 has given way to
+              <a href="https://gamehacking.org/">GameHacking.org</a><br />
+              This is a static version of the mythical website, designed to allow
+              the use the <b>Arsenal tools</b> it offered, and for historical
+              purposes.
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div id="footer"></div>
+  </body>
+</html>

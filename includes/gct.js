@@ -173,24 +173,40 @@ function Toggle(Bob)
 
 function CreateGCT()
 {
-	document.fin.gctdata.value="00D0C0DE00D0C0DE";
-	var Bob=trim(document.gct.gctorder.value).replace(/t/gi,"c").split(" ");
-	for(var i=0; i<Bob.length; i++)
-	{
-		if(document.gct[Bob[i]])
-			document.fin.gctdata.value+=document.gct[Bob[i]].value.replace(/\r/gi, "").replace(/\n/gi, "").replace(/ /gi, "");
-	}
-	if(document.fin.gctdata.value=="00D0C0DE00D0C0DE")
-	{
-		alert("No codes selected");
-	}
-	else
-	{
-		document.fin.gctdata.value+="FF00000000000000";
-		document.fin.gctname.value=document.gct.titleid.value;
-		//document.gct.newcodes.value=document.fin.gctdata.value; //debug output
-		document.fin.submit();
-	}
+    document.fin.gctdata.value="00D0C0DE00D0C0DE";
+    var Bob=trim(document.gct.gctorder.value).replace(/t/gi,"c").split(" ");
+    for(var i=0; i<Bob.length; i++)
+    {
+        if(document.gct[Bob[i]])
+            document.fin.gctdata.value+=document.gct[Bob[i]].value.replace(/\r/gi, "").replace(/\n/gi, "").replace(/ /gi, "");
+    }
+    if(document.fin.gctdata.value=="00D0C0DE00D0C0DE")
+    {
+        alert("No codes selected");
+    }
+    else
+    {
+        document.fin.gctdata.value+="F000000000000000";
+        document.fin.gctname.value=document.gct.titleid.value;
+
+        var bytes = new Uint8Array(document.fin.gctdata.value.match(/[\da-f]{2}/gi).map(function (h) {
+            return parseInt(h, 16)
+        }));
+
+        var blob = new Blob([bytes], {type: "application/octet-stream"});
+
+        var url = window.URL.createObjectURL(blob);
+
+        var link = document.createElement("a");
+        link.download = document.gct.titleid.value + ".gct";
+        link.href = url;
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+    }
 }
 
 /*ReplaceAll function from http://www.codedigest.com*/

@@ -18,26 +18,25 @@
     <div class="top"></div>
     <table>
       <tr>
-        <td id="navigation">
-        </td>
+        <td id="navigation"></td>
         <td>
           <div class="list">
             <div class="title">GeckoCodes.org - Online GCT Creator</div>
             <form
               class="gct"
               name="gct"
-              action="index.php@gct=.html#"
+              action="gct.html"
               method="POST"
             >
               Codes are set in the gct in the same order they're checked.<br />
               <a
-                href="index.php@gct=.html#"
+                href="gct.html"
                 class="bttn"
                 onclick="ShowNew(); return false;"
                 >Add More Codes</a
               >
               <a
-                href="index.php@gct=.html#"
+                href="gct.html"
                 class="bttn"
                 onclick="CreateGCT(); return false;"
                 >Download GCT</a
@@ -51,12 +50,12 @@
                 <a
                   name="editbox"
                   class="bttn"
-                  href="index.php@gct=.html#"
+                  href="gct.html"
                   onclick="ApplyEdit(); return false;"
                   >Apply</a
                 >
                 <a
-                  href="index.php@gct=.html#"
+                  href="gct.html"
                   class="bttn"
                   onclick="CancelEdit(); return false;"
                   >Cancel</a
@@ -84,14 +83,14 @@
               </div>
               <div class="gctnew" id="gctnew">
                 <a
-                  href="index.php@gct=.html#"
+                  href="gct.html"
                   class="bttn"
                   name="addcodes"
                   onclick="AddCodes(); return false;"
                   >Add Codes</a
                 >
                 <a
-                  href="index.php@gct=.html#"
+                  href="gct.html"
                   class="bttn"
                   onclick="CancelNew(); return false;"
                   >Cancel</a
@@ -105,13 +104,13 @@
                 ><br />
               </div>
               <br /><a
-                href="index.php@gct=.html#"
+                href="gct.html"
                 class="bttn"
                 onclick="ShowNew(); return false;"
                 >Add More Codes</a
               >
               <a
-                href="index.php@gct=.html#"
+                href="gct.html"
                 class="bttn"
                 onclick="CreateGCT(); return false;"
                 >Download GCT</a
@@ -121,20 +120,14 @@
                 value="0"
               /><input type="hidden" name="editing" />
             </form>
-            <form
-              class="gct"
-              name="fin"
-              action="gct.html"
-              method="POST"
-            >
+            <form class="gct" name="fin" action="gct.html" method="POST" onclick="return false;">
               <input type="hidden" name="gctname" />
               <input type="hidden" name="gctdata" />
             </form>
           </div>
-          </div>
         </td>
       </tr>
     </table>
-	<div id="footer"></div>
+    <div id="footer"></div>
   </body>
 </html>

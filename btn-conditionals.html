@@ -1,281 +1,711 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+  <head>
+    <script src="includes/jquery.min.js"></script>
+    <script type="text/javascript" src="includes/ajax.js"></script>
+    <script type="text/javascript" src="includes/arsenal.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+        $("#navigation").load("navigation.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
+    <div id="header"></div>
+  </head>
 
-<head>
-	<script src="includes/jquery.min.js"></script>
-	<script type="text/javascript" src="includes/ajax.js"></script>
-	<script type="text/javascript" src="includes/arsenal.js"></script>
-	<script>
-		$(function () {
-			$("#header").load("header.html");
-			$("#navigation").load("navigation.html");
-			$("#footer").load("footer.html");
-		});
-	</script>
-	<div id="header"></div>
-</head>
+  <body onload="ResetAll(); ToggleCh()">
+    <div class="top"></div>
+    <table>
+      <tr>
+        <td id="navigation"></td>
+        <td>
+          <div class="list">
+            <div class="title">GeckoCodes.org - Button Conditionals</div>
+            <div id="space"></div>
+            <div class="buttons">
+              <table>
+                <tr>
+                  <td>
+                    <form
+                      method="GET"
+                      action="btn-conditionals.html#"
+                      onsubmit="return false;"
+                      name="wii"
+                    >
+                      <div id="wiidiv">
+                        <div>Wii Remote + Nunchuck</div>
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Left"
+                          value="0001"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Left.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Right"
+                          value="0002"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Right.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Down"
+                          value="0004"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Down.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Up"
+                          value="0008"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Up.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Plus"
+                          value="0010"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/p.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="0020"
+                          title="0020"
+                          value="0020"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="0040"
+                          title="0040"
+                          value="0040"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="0080"
+                          title="0080"
+                          value="0080"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="2"
+                          value="0100"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/2.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="1"
+                          value="0200"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/1.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="B"
+                          value="0400"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/B.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="A"
+                          value="0800"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/A.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Minus"
+                          value="1000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/m.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Z"
+                          value="2000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Z.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="C"
+                          value="4000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/C.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnwii"
+                          alt="Home"
+                          value="8000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Home.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input type="hidden" name="last" value="" />
+                        <input type="hidden" name="OR" value="0000" />
+                        <input type="hidden" name="NOT" value="FFFF" />
+                      </div>
+                    </form>
+                  </td>
+                  <td>
+                    <form
+                      method="GET"
+                      action="btn-conditionals.html#"
+                      onsubmit="return false;"
+                      name="results"
+                    >
+                      <div id="resultsdiv">
+                        Address
+                        <input
+                          id="Address"
+                          type="text"
+                          name="Address"
+                          value="80000000"
+                          maxlength="8"
+                          onchange="Validate();"
+                        /><br />
+                        <input
+                          type="checkbox"
+                          name="Pointer"
+                          value=""
+                          onclick="Update();"
+                        />
+                        Using Pointer<br />
+                        <input
+                          type="checkbox"
+                          name="Inclusive"
+                          value=""
+                          onclick="Update();"
+                        />
+                        Inclusive (use mask)<br />
+                        <input
+                          type="checkbox"
+                          name="Endif"
+                          value=""
+                          onclick="Update();"
+                        />
+                        Apply Endif<br />
+                        <input
+                          type="checkbox"
+                          name="Reverse"
+                          value=""
+                          onclick="Update();"
+                        />
+                        Little Endian (Reverse)<br />Compare Type<br />
+                        <div class="giveborder">
+                          =
+                          <input
+                            type="radio"
+                            name="Compare"
+                            value="8"
+                            checked="checked"
+                            onclick="this.form.CT.value=this.value; Update();"
+                          />&nbsp;&nbsp;&nbsp; !=
+                          <input
+                            type="radio"
+                            name="Compare"
+                            value="A"
+                            onclick="this.form.CT.value=this.value; Update();"
+                          />&nbsp;&nbsp;&nbsp; &gt;
+                          <input
+                            type="radio"
+                            name="Compare"
+                            value="C"
+                            onclick="this.form.CT.value=this.value; Update();"
+                          />&nbsp;&nbsp;&nbsp; &lt;
+                          <input
+                            type="radio"
+                            name="Compare"
+                            value="E"
+                            onclick="this.form.CT.value=this.value; Update();"
+                          />
+                        </div>
+                        <br />
+                        <p id="targetdisplay">Result (wii)</p>
+                        <a
+                          href="btn-conditionals.html#"
+                          onclick="ResetData(); this.blur(); return false;"
+                          >[Reset]</a
+                        ><br />
+                        <input
+                          class="targetdisplay"
+                          type="text"
+                          name="Output"
+                          value="28000000 00000000"
+                          maxlength="17"
+                        /><br />
+                        <br />
+                        <div class="giveborder">
+                          <p id="reverse">Value Lookup</p>
+                          <input
+                            id="ToButtons"
+                            type="text"
+                            name="ToButtons"
+                            value="0000"
+                            maxlength="4"
+                            onchange="ValidateSetButtons();"
+                          />
+                          <a
+                            href="btn-conditionals.html#"
+                            onclick="SetButtons(); this.blur(); return false;"
+                            >Show</a
+                          >
+                        </div>
+                        <input type="hidden" name="CT" value="8" />
+                        <input type="hidden" name="Current" value="wii" />
+                      </div>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <form
+                      method="GET"
+                      action="btn-conditionals.html#"
+                      onsubmit="return false;"
+                      name="classic"
+                    >
+                      <div id="classicdiv">
+                        <div>Classic Controller</div>
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Up"
+                          value="0001"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Up.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Left"
+                          value="0002"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Left.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Zr"
+                          value="0004"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/ZR.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="X"
+                          value="0008"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/xx.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="A"
+                          value="0010"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/aa.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Y"
+                          value="0020"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/yy.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="B"
+                          value="0040"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/bb.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Zl"
+                          value="0080"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/ZL.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="0100"
+                          title="0100"
+                          value="0100"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="R"
+                          value="0200"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/R.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Plus"
+                          value="0400"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/p.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="0800"
+                          title="0800"
+                          value="0800"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Minus"
+                          value="1000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/m.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="L"
+                          value="2000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/L.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Down"
+                          value="4000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Down.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttnclassic"
+                          alt="Right"
+                          value="8000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Right.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input type="hidden" name="last" value="" />
+                        <input type="hidden" name="OR" value="0000" />
+                        <input type="hidden" name="NOT" value="FFFF" />
+                      </div>
+                    </form>
+                  </td>
+                  <td>
+                    <form
+                      method="GET"
+                      action="btn-conditionals.html#"
+                      onsubmit="return false;"
+                      name="gcn"
+                    >
+                      <div id="gcndiv">
+                        <div>GameCube Controller</div>
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Left"
+                          value="0001"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Left.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Right"
+                          value="0002"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Right.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Down"
+                          value="0004"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Down.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Up"
+                          value="0008"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Up.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Z"
+                          value="0010"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Z.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="R"
+                          value="0020"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/R.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="L"
+                          value="0040"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/L.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="0080"
+                          title="0080"
+                          value="0080"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="A"
+                          value="0100"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/A.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="B"
+                          value="0200"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/B.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="X"
+                          value="0400"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/X.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Y"
+                          value="0800"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Y.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <br />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="Start"
+                          value="1000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/Start.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="2000"
+                          title="2000"
+                          value="2000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="4000"
+                          title="4000"
+                          value="4000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input
+                          type="image"
+                          name="bttngcn"
+                          alt="8000"
+                          title="8000"
+                          value="8000"
+                          onclick="Buttons(this);"
+                          src="includes/buttons/blank.png"
+                          onmouseover="OverButton(this,1);"
+                          onmouseout="OverButton(this,0);"
+                        />
+                        <input type="hidden" name="last" value="" />
+                        <input type="hidden" name="OR" value="0000" />
+                        <input type="hidden" name="NOT" value="FFFF" />
+                      </div>
+                    </form>
+                  </td>
+                </tr>
+              </table>
+              <form
+                method="GET"
+                action="btn-conditionals.html#"
+                onsubmit="return false;"
+                name="stuff"
+              >
+                <p>
+                  <input type="hidden" name="ColorHover" value="19B0E9" />
+                  <input type="hidden" name="ColorClick" value="E87D21" />
+                  <input type="hidden" name="ColorNormal" value="FFFFFF" />
+                  <input
+                    type="hidden"
+                    name="CanReset"
+                    value="wii classic gcn"
+                  />
+                </p>
+              </form>
+              <br /><br />
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-<body onload="ResetAll(); ToggleCh()">
-	<div class="top">
-	</div>
-	<table>
-		<tr>
-			<td id="navigation">
-			</td>
-			<td>
-				<div class="list">
-					<div class="title">GeckoCodes.org - Button Conditionals</div>
-					<div id="space"></div>
-					<div class="buttons">
-						<table>
-							<tr>
-								<td>
-									<form method="GET" action="btn-conditionals.html#" onsubmit="return false;"
-										name="wii">
-										<div id="wiidiv">
-											<div>Wii Remote + Nunchuck</div>
-											<input type="image" name="bttnwii" alt="Left" value="0001"
-												onclick="Buttons(this);" src="includes/buttons/Left.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="Right" value="0002"
-												onclick="Buttons(this);" src="includes/buttons/Right.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="Down" value="0004"
-												onclick="Buttons(this);" src="includes/buttons/Down.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="Up" value="0008"
-												onclick="Buttons(this);" src="includes/buttons/Up.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnwii" alt="Plus" value="0010"
-												onclick="Buttons(this);" src="includes/buttons/p.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="0020" title="0020" value="0020"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="0040" title="0040" value="0040"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="0080" title="0080" value="0080"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnwii" alt="2" value="0100"
-												onclick="Buttons(this);" src="includes/buttons/2.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="1" value="0200"
-												onclick="Buttons(this);" src="includes/buttons/1.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="B" value="0400"
-												onclick="Buttons(this);" src="includes/buttons/B.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="A" value="0800"
-												onclick="Buttons(this);" src="includes/buttons/A.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnwii" alt="Minus" value="1000"
-												onclick="Buttons(this);" src="includes/buttons/m.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="Z" value="2000"
-												onclick="Buttons(this);" src="includes/buttons/Z.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="C" value="4000"
-												onclick="Buttons(this);" src="includes/buttons/C.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnwii" alt="Home" value="8000"
-												onclick="Buttons(this);" src="includes/buttons/Home.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="hidden" name="last" value="">
-											<input type="hidden" name="OR" value="0000">
-											<input type="hidden" name="NOT" value="FFFF">
-										</div>
-									</form>
-								</td>
-								<td>
-									<form method="GET" action="btn-conditionals.html#" onsubmit="return false;"
-										name="results">
-										<div id="resultsdiv">
-											Address <input id="Address" type="text" name="Address" value="80000000"
-												maxlength="8" onchange="Validate();"><br>
-											<input type="checkbox" name="Pointer" value="" onclick="Update();"> Using
-											Pointer<br>
-											<input type="checkbox" name="Inclusive" value="" onclick="Update();">
-											Inclusive (use mask)<br>
-											<input type="checkbox" name="Endif" value="" onclick="Update();"> Apply
-											Endif<br>
-											<input type="checkbox" name="Reverse" value="" onclick="Update();"> Little
-											Endian (Reverse)<br>Compare Type<br>
-											<div class="giveborder">
-												= <input type="radio" name="Compare" value="8" checked="checked"
-													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-												!= <input type="radio" name="Compare" value="A"
-													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-												&gt; <input type="radio" name="Compare" value="C"
-													onclick="this.form.CT.value=this.value; Update();">&nbsp;&nbsp;&nbsp;
-												&lt; <input type="radio" name="Compare" value="E"
-													onclick="this.form.CT.value=this.value; Update();"></div><br>
-											<p id="targetdisplay">Result (wii)</p> <a href="btn-conditionals.html#"
-												onclick="ResetData(); this.blur(); return false;">[Reset]</a><br>
-											<input class="targetdisplay" type="text" name="Output"
-												value="28000000 00000000" maxlength="17"><br>
-											<br>
-											<div class="giveborder">
-												<p id="reverse">Value Lookup </p><input id="ToButtons" type="text"
-													name="ToButtons" value="0000" maxlength="4"
-													onchange="ValidateSetButtons();"> <a
-													href="btn-conditionals.html#"
-													onclick="SetButtons(); this.blur(); return false;">Show</a>
-											</div>
-											<input type="hidden" name="CT" value="8">
-											<input type="hidden" name="Current" value="wii">
-										</div>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<form method="GET" action="btn-conditionals.html#" onsubmit="return false;"
-										name="classic">
-										<div id="classicdiv">
-											<div>Classic Controller</div>
-											<input type="image" name="bttnclassic" alt="Up" value="0001"
-												onclick="Buttons(this);" src="includes/buttons/Up.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Left" value="0002"
-												onclick="Buttons(this);" src="includes/buttons/Left.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Zr" value="0004"
-												onclick="Buttons(this);" src="includes/buttons/ZR.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="X" value="0008"
-												onclick="Buttons(this);" src="includes/buttons/xx.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnclassic" alt="A" value="0010"
-												onclick="Buttons(this);" src="includes/buttons/aa.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Y" value="0020"
-												onclick="Buttons(this);" src="includes/buttons/yy.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="B" value="0040"
-												onclick="Buttons(this);" src="includes/buttons/bb.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Zl" value="0080"
-												onclick="Buttons(this);" src="includes/buttons/ZL.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnclassic" alt="0100" title="0100" value="0100"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="R" value="0200"
-												onclick="Buttons(this);" src="includes/buttons/R.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Plus" value="0400"
-												onclick="Buttons(this);" src="includes/buttons/p.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="0800" title="0800" value="0800"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttnclassic" alt="Minus" value="1000"
-												onclick="Buttons(this);" src="includes/buttons/m.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="L" value="2000"
-												onclick="Buttons(this);" src="includes/buttons/L.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Down" value="4000"
-												onclick="Buttons(this);" src="includes/buttons/Down.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttnclassic" alt="Right" value="8000"
-												onclick="Buttons(this);" src="includes/buttons/Right.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="hidden" name="last" value="">
-											<input type="hidden" name="OR" value="0000">
-											<input type="hidden" name="NOT" value="FFFF">
-										</div>
-									</form>
-								</td>
-								<td>
-									<form method="GET" action="btn-conditionals.html#" onsubmit="return false;"
-										name="gcn">
-										<div id="gcndiv">
-											<div>GameCube Controller</div>
-											<input type="image" name="bttngcn" alt="Left" value="0001"
-												onclick="Buttons(this);" src="includes/buttons/Left.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="Right" value="0002"
-												onclick="Buttons(this);" src="includes/buttons/Right.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="Down" value="0004"
-												onclick="Buttons(this);" src="includes/buttons/Down.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="Up" value="0008"
-												onclick="Buttons(this);" src="includes/buttons/Up.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttngcn" alt="Z" value="0010"
-												onclick="Buttons(this);" src="includes/buttons/Z.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="R" value="0020"
-												onclick="Buttons(this);" src="includes/buttons/R.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="L" value="0040"
-												onclick="Buttons(this);" src="includes/buttons/L.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="0080" title="0080" value="0080"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttngcn" alt="A" value="0100"
-												onclick="Buttons(this);" src="includes/buttons/A.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="B" value="0200"
-												onclick="Buttons(this);" src="includes/buttons/B.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="X" value="0400"
-												onclick="Buttons(this);" src="includes/buttons/X.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="Y" value="0800"
-												onclick="Buttons(this);" src="includes/buttons/Y.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<br>
-											<input type="image" name="bttngcn" alt="Start" value="1000"
-												onclick="Buttons(this);" src="includes/buttons/Start.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="2000" title="2000" value="2000"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="4000" title="4000" value="4000"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="image" name="bttngcn" alt="8000" title="8000" value="8000"
-												onclick="Buttons(this);" src="includes/buttons/blank.png"
-												onmouseover="OverButton(this,1);" onmouseout="OverButton(this,0);">
-											<input type="hidden" name="last" value="">
-											<input type="hidden" name="OR" value="0000">
-											<input type="hidden" name="NOT" value="FFFF">
-										</div>
-									</form>
-								</td>
-							</tr>
-						</table>
-						<form method="GET" action="btn-conditionals.html#" onsubmit="return false;" name="stuff">
-							<p>
-								<input type="hidden" name="ColorHover" value="19B0E9">
-								<input type="hidden" name="ColorClick" value="E87D21">
-								<input type="hidden" name="ColorNormal" value="FFFFFF">
-								<input type="hidden" name="CanReset" value="wii classic gcn">
-							</p>
-						</form><br><br>
-					</div>
-				</div>
-			</td>
-		</tr>
-	</table>
-
-	<div id="footer">
-	</div>
-
-</body>
-
+    <div id="footer"></div>
+  </body>
 </html>

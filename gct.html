@@ -22,17 +22,9 @@
         <td>
           <div class="list">
             <div class="title">GeckoCodes.org - Online GCT Creator</div>
-            <form
-              class="gct"
-              name="gct"
-              action="gct.html"
-              method="POST"
-            >
+            <form class="gct" name="gct" action="gct.html" method="POST">
               Codes are set in the gct in the same order they're checked.<br />
-              <a
-                href="gct.html"
-                class="bttn"
-                onclick="ShowNew(); return false;"
+              <a href="gct.html" class="bttn" onclick="ShowNew(); return false;"
                 >Add More Codes</a
               >
               <a
@@ -120,7 +112,13 @@
                 value="0"
               /><input type="hidden" name="editing" />
             </form>
-            <form class="gct" name="fin" action="gct.html" method="POST" onclick="return false;">
+            <form
+              class="gct"
+              name="fin"
+              action="gct.html"
+              method="POST"
+              onclick="return false;"
+            >
               <input type="hidden" name="gctname" />
               <input type="hidden" name="gctdata" />
             </form>
